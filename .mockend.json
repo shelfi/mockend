@@ -49,9 +49,6 @@
         "max": "2020-12-31T23:59:59Z"
       }
     },
-    "name": {
-      "string": {}
-    },
     "price": {
       "int": { "min": 0, "max": 9000 }
     },
@@ -60,6 +57,9 @@
     },
     "products": {
       "hasMany": "Product"
+    },
+    "user": {
+      "belongsTo": "User"
     }
   },
   "Post": {
