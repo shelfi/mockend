@@ -1,4 +1,67 @@
 {
+  "User": {
+    "id": {
+      "int": { "min": 0, "max": 9000 }
+    },
+    "fname": {
+      "string": {}
+    },
+    "lname": {
+      "string": {}
+    },
+    "email": {
+      "string": {}
+    },
+    "pwd": {
+      "string": {}
+    },
+    "createdAt": {
+      "dateTime": {
+        "min": "2010-01-01T00:00:00Z",
+        "max": "2020-12-31T23:59:59Z"
+      }
+    }
+  },
+  "Product": {
+    "id": {
+      "int": { "min": 0, "max": 9000 }
+    },
+    "name": {
+      "string": {}
+    },
+    "price": {
+      "int": { "min": 0, "max": 9000 }
+    },
+    "priceUnit": {
+      "string": {}
+    },
+    "order": {
+      "belongsTo": "Order"
+    }
+  },
+  "Order": {
+    "id": {
+      "int": { "min": 0, "max": 9000 }
+    },
+    "createdAt": {
+      "dateTime": {
+        "min": "2010-01-01T00:00:00Z",
+        "max": "2020-12-31T23:59:59Z"
+      }
+    },
+    "name": {
+      "string": {}
+    },
+    "price": {
+      "int": { "min": 0, "max": 9000 }
+    },
+    "priceUnit": {
+      "string": {}
+    },
+    "products": {
+      "hasMany": "Product"
+    }
+  },
   "Post": {
     "title": {
       "string": {}
